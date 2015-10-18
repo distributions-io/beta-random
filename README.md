@@ -46,7 +46,7 @@ The function accepts the following `options`:
 *	__seed__: positive integer used as a seed to initialize the generator. If not supplied, uniformly distributed random numbers are generated via an underlying generator seedable by setting the `seed` property of the exported function.
 *	__dtype__: output data type (see [`matrix`](https://github.com/dstructs/matrix) for a list of acceptable data types). Default: `generic`.
 
-The [beta](https://en.wikipedia.org/wiki/Beta_distribution) distribution is a function of two parameters: `alpha > 0`(shape parameter) and `beta > 0`(rate parameter). By default, `alpha` is equal to `1` and `beta` is equal to `1`. To adjust either parameter, set the corresponding option.
+The [beta](https://en.wikipedia.org/wiki/Beta_distribution) distribution is a function of two parameters: `alpha > 0`(first shape parameter) and `beta > 0`(second shape parameter). By default, `alpha` is equal to `1` and `beta` is equal to `1`. To adjust either parameter, set the corresponding option.
 
 ```javascript
 var out = random( 5, {
