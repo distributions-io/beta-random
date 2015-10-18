@@ -77,17 +77,17 @@ If no `seed` option is supplied, each function call uses a common underlying uni
 ```javascript
 random.seed = 11;
 var out = random();
-// returns 0.211
+// returns ~0.211
 
 var out = random();
-// returns 0.179
+// returns ~0.179
 
 random.seed = 11;
 var out = random();
-// returns 0.211
+// returns ~0.211
 
 var out = random();
-// returns 0.179
+// returns ~0.179
 
 ```
 
@@ -119,7 +119,7 @@ __Notes__:
 	var out = random( [2,1,3], {
 		'dtype': 'float32'
 	});
-	// returns [ 0.9142892126443157,0.2642629844732251,0.3064603380735499, 0.9620660495320058,0.4069626425572399,0.9655021858940379 ]
+	// returns [ [ [~0.914,~0.264,~0.306] ], [ [~0.962,0.407,~0.966] ] ]
 
 	```
 
