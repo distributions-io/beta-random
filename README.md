@@ -60,13 +60,14 @@ var out = random( 5, {
 To be able to reproduce the generated random numbers, set the `seed` option to a positive integer.
 
 ```javascript
-var out = random( 3, {
+var out;
+out = random( 3, {
 	'seed': 22
 });
 // returns [ ~0.203, ~0.642, ~0.123 ]
 
-var out = random( 3, {
-    'seed': 22
+out = random( 3, {
+	'seed': 22
 });
 // returns [ ~0.203, ~0.642, ~0.123 ]
 
@@ -75,18 +76,20 @@ var out = random( 3, {
 If no `seed` option is supplied, each function call uses a common underlying uniform number generator. A positive-integer seed for this underlying generator can be supplied by setting the seed property of the exported function.
 
 ```javascript
+var out;
+
 random.seed = 11;
-var out = random();
+out = random();
 // returns ~0.211
 
-var out = random();
+out = random();
 // returns ~0.179
 
 random.seed = 11;
-var out = random();
+out = random();
 // returns ~0.211
 
-var out = random();
+out = random();
 // returns ~0.179
 
 ```
