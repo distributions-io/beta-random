@@ -130,8 +130,8 @@ __Notes__:
 
 The algorithm used to generate beta random variables depends on the parameter inputs. In cases where `alpha` equals `beta` and both exceed `1.5` or when `alpha>1` and `beta>1`, the function uses the BN and BS algorithms developed by Ahrens & Dieter.
 
-In all other cases, the function generates gamma distributed variates `x` and `y` with parameters `alpha` and `beta` via [gamma-random](https://github.com/distributions-io/gamma-random)
-and returns `x/(x+y)`.
+In all other cases, the function generates gamma distributed variates `X` and `Y` with parameters `alpha` and `beta` by drawing `X ~ Gamma( alpha, 1 )` and `Y ~ Gamma( beta, 1)` via [gamma-random](https://github.com/distributions-io/gamma-random)
+and returning `X / ( X + Y)`.
 
 To generate the random standard normal variates, the module internally calls the [normal-random](https://github.com/distributions-io/normal-random) which provides a very fast algorithm, the improved *Ziggurat* algorithm by Doornik, to sample from a normal distribution.
 
